@@ -1,0 +1,9 @@
+.ant-space-item {
+  grid-area: poster;
+  display: flex;
+  height: 100%;
+}
+
+.card__poster--loaded {
+  object-fit: cover;
+}

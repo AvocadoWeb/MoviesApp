@@ -1,0 +1,22 @@
+.card__poster {
+  width: 183px;
+  grid-area: poster;
+  height: 281px;
+  display: flex;
+  justify-content: center;
+}
+
+.card__spin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: poster;
+}
+
+@media (max-width: 1010px) {
+  .card__poster {
+    width: 60px;
+    height: 91px;
+  }
+}

@@ -1,0 +1,81 @@
+.card {
+  display: grid;
+  grid-template-columns: minmax(12px, min-content) min-content 12px auto 12px;
+  grid-template-rows: 0 min-content 0 auto 12px;
+  grid-template-areas:
+    "poster poster . . ."
+    "poster poster . header ."
+    "poster poster . . ."
+    "poster poster . text ."
+    "poster poster . . .";
+  width: 454px;
+  height: 281px;
+  box-shadow: 0px 4px 12px rgb(0 0 0 / 15%);
+}
+
+.card__header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+}
+
+.card__rate {
+  font-size: 15px;
+}
+
+.card__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__title-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: start;
+}
+
+.card__date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #827e7e;
+  text-align: start;
+  padding-bottom: 9px;
+}
+
+.card__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: text;
+}
+
+@media (max-width: 1010px) {
+  .card {
+    grid-template-areas:
+      ". . . . ."
+      ". poster . header ."
+      ". . . . ."
+      ". text text text ."
+      ". . . . .";
+    height: 245px;
+    padding-top: 6px;
+  }
+}
+
+.ant-tag {
+  margin-right: 0px;
+}
+
+.ant-typography {
+  text-align: start;
+  margin-bottom: 0 !important;
+}
